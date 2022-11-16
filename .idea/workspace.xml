@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f60a091f-0830-4eca-8f6a-18543b4802ed" name="Changes" comment="">
+    <list default="true" id="f60a091f-0830-4eca-8f6a-18543b4802ed" name="Changes" comment="new">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Bank/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Bank/Bank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/File/FileWriting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/File/FileWriting.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,6 +13,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2HddkVh4tpgxJeBm15SRTpdvP90" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -22,7 +27,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Software/IntelliJ IDEA 2022.2.3/projects/lab6"
   }
 }]]></component>
   <component name="RunManager">
@@ -53,8 +59,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1668619038147</updated>
-      <workItem from="1668619039684" duration="279000" />
+      <workItem from="1668619039684" duration="549000" />
+      <workItem from="1668632604837" duration="28000" />
+      <workItem from="1668637194722" duration="144000" />
+      <workItem from="1668637395967" duration="2553000" />
     </task>
+    <task id="LOCAL-00001" summary="new">
+      <created>1668619551377</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668619551377</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -70,5 +87,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="new" />
+    <option name="LAST_COMMIT_MESSAGE" value="new" />
   </component>
 </project>

@@ -36,11 +36,11 @@ public class Bank {
 
 
     public Bank banksSet() {
-        int name = getRandomNumber(1, 3);
-        int creditPercent = getRandomNumber(1, 3);
-        int MaxTimeForRepayment = getRandomNumber(1, 3);
+        int name = getRandomNumber(1, 3); // вибираю на рандом який буде банк
+        int creditPercent = getRandomNumber(1, 3); // рандом відсоток
+        int MaxTimeForRepayment = getRandomNumber(1, 3); // рандом час на погашення
 
-
+        // генерація про кредиторів
         if (name == 1) {
             this.bankName = "Privat24";
         }
@@ -70,10 +70,11 @@ public class Bank {
 
         return this;
     }
-    public void showBanks(){
-        System.out.println("Введтіь логін користувача: ");
+    public void showBanks() {
+        System.out.println("Welcome, dear client");
+        System.out.println("Enter your login : ");
         this.user.setLogin(scanner.next());
-        System.out.println("Введтіь пароль користувача: ");
+        System.out.println("Enter your password : ");
         this.user.setPassword(scanner.next());
         ArrayList<Bank> banks = new ArrayList<>();
         Bank firstBank = banksSet();
@@ -82,15 +83,15 @@ public class Bank {
         banks.add(secondBank);
         Bank thirdBank = banksSet();
         banks.add(thirdBank);
-
-
-        for (int i = 0; i < banks.size(); i++){
-            System.out.println("Назва Банку: " + banks.get(i).getBankName() + "\nМісячний відсоток: " + banks.get(i).getCreditPercent()
-                    + "\nМаксимальний строк кредиту: " + banks.get(i).getMaxTimeForRepayment() + "\n");
+        System.out.println("\t\tПерелік банків кредиторів\n");
+        for (int i = 0; i <= banks.size(); i++) {
+            System.out.println("Назва банку - " + banks.get(i).getBankName() + "\nМісячний відсоток: " + banks.get(i).getCreditPercent()
+                    + "\nМаксимальний строк кредиту - " + banks.get(i).getMaxTimeForRepayment() + "місяців\n");
         }
         printCredits();
     }
 
+    // прінт наявних кредитів
     public void printCredits(){
         for (int i = 0; i < creditList.size(); i++){
             System.out.println("\n[" + (i+1) + "]");
@@ -98,6 +99,7 @@ public class Bank {
         }
     }
 
+    // створення кредиту
     public void createCredit(){
         System.out.println("Введіть назву кредиту: ");
         String inputName = scanner.next();
@@ -111,6 +113,7 @@ public class Bank {
         creditList.add(new Credit(inputName, inputMoney, inputTime));
     }
 
+    // зміна параметрів кредиту
     public void changeCredit() {
         System.out.println("Введіть номер кредиту який хочете змінити: ");
         int index = scanner.nextInt();
@@ -127,6 +130,7 @@ public class Bank {
         creditList.set(index - 1, new Credit(inputName, inputMoney, inputTime));
     }
 
+    // видалення кредиту + вивід наявних
     public void deleteCredit(){
         System.out.println("Бажаєте вивести всі доступні кредити? [1 - Так/2 - Ні] ");
         int choose = scanner.nextInt();
@@ -144,6 +148,7 @@ public class Bank {
         }
     }
 
+    // пошук кредиту за параметром
     public void findCredit(){
         System.out.println("""
                 Виберіть за яким параметром знайти кредит: 
@@ -165,6 +170,7 @@ public class Bank {
         }
     }
 
+    // пошук за назвою кредиту
     public void firstSearch() {
         System.out.println("Введіть за якою назвою робити пошук: ");
         String searchingName = scanner.next();
@@ -177,6 +183,7 @@ public class Bank {
             }
         }
     }
+    // пошук за сумою кредиту
     public void secondSearch(){
         System.out.println("Введіть за якою сумою *ціле число* робити пошук(Спочатку мінімум, потім максимум): ");
         int lowerLimit = scanner.nextInt();
@@ -190,6 +197,7 @@ public class Bank {
         }
     }
 
+    // пошук за датою на повернення кредиту
     public void thirdSearch(){
         System.out.println("Введіть час *у місяцях* за яким робити пошук(Спочатку мінімум, потім максимум): ");
         int lowerLimit = scanner.nextInt();
@@ -202,6 +210,7 @@ public class Bank {
         }
     }
 
+    // зчитування з файлу
     public void readFromFile() {
         BufferedReader readingTool;
         try {
@@ -236,6 +245,4 @@ public class Bank {
         catch (FileNotFoundException e) {throw new RuntimeException(e);}
         catch (IOException e) {throw new RuntimeException(e);}
     }
-
-
 }
